@@ -9,3 +9,6 @@ T_ATRIBUTO* novo_atributo(int quantidade,int* elementos_discretos){
         atributo->elementos_discretos[i] = elementos_discretos[i];
     return atributo;
 }
+
+
+
