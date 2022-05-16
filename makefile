@@ -1,11 +1,20 @@
 
-all: main
-	./bin/main.o
+all: program
+
+CFLAGS = -Wall -g
+
+program: main
+	./main
+	
+main: main.o
+	gcc $(CFLAGS) -o main main.o arvore.cpp
+
+arvore.o:
+	arvore.cpp
+
+main.o: 
+	main.cpp
 
 
-
-main: main.cpp
-	gcc -o ./bin/main.o main.cpp
-
-clean:
-	rm -rf ./bin/*.o 
+clear:
+	rm *.o && rm main
